@@ -4,7 +4,9 @@ services:
 
   my-app:
     image: my-app:1.0
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile    
     container_name: my-app
     ports:
       - "3000:3000"
