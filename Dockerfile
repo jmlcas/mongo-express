@@ -5,7 +5,7 @@ ENV MONGO_DB_USERNAME=admin \
 
 WORKDIR /usr/src/app
 
-COPY ./app ./
+COPY package*.json ./
 
 RUN npm install
 
@@ -13,5 +13,5 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["npm", "server.js"]
+CMD ["npm", "start"]
 
