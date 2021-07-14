@@ -1,6 +1,16 @@
 version: '3'
 
 services:
+
+  app:
+    image: my-app
+    container_name: my-app    
+    restart: unless-stopped
+    build: .
+    ports:
+      - '3000:3000'
+    external_links:
+      - mongodb
     
   mongodb:
     image: mongo
