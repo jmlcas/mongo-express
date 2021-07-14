@@ -1,7 +1,8 @@
 FROM node:13-alpine
 
-ENV MONGO_DB_USERNAME=admin \
-    MONGO_DB_PWD=p4ssw0rd
+ENV MONGO_DB_USERNAME=admin 
+
+ENV MONGO_DB_PWD=p4ssw0rd
 
 WORKDIR /usr/src/app
 
