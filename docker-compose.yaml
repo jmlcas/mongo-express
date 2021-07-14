@@ -9,7 +9,9 @@ services:
       dockerfile: Dockerfile    
     container_name: my-app
     ports:
-      - "3000:3000"      
+      - "3000:3000"
+    external_links:
+      - mongodb      
     
   mongodb:
     image: mongo
