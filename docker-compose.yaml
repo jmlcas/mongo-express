@@ -10,7 +10,7 @@ services:
     container_name: my-app
     ports:
       - "3000:3000"
-    external_links:
+    links:
       - mongodb      
     
   mongodb:
@@ -22,8 +22,8 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=p4ssw0rd
-    volumes:
-      - ./mongo-data:/data/db
+#    volumes:
+#      - ./mongo-data:/data/db
       
   mongo-express:
     image: mongo-express
