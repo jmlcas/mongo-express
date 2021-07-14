@@ -1,21 +1,7 @@
 version: '3'
 
 services:
-
-  my-app:
-    image: my-app:1.0
-    build:
-      context: .
-      dockerfile: Dockerfile    
-    container_name: my-app
-    ports:
-      - "3000:3000"
-    restart: unless-stopped 
-    links:
-      - mongodb
-    depends_on:
-      - mongodb    
-      
+    
   mongodb:
     image: mongo
     container_name: mongodb   
