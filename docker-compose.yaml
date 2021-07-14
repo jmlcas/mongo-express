@@ -3,7 +3,7 @@ version: '3'
 services:
 
   my-app:
-    image: my-app:1.0
+    image: my-app
     build:
       context: .
       dockerfile: Dockerfile    
